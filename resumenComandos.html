@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos Git y npm</title>
+    <style>
+        body {
+            display: flex;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        #sidebar {
+            width: 250px;
+            background-color: #f4f4f4;
+            border-right: 1px solid #ddd;
+            padding: 20px;
+            position: fixed;
+            height: 100vh;
+        }
+        #sidebar h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        #sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        #sidebar ul li {
+            margin: 10px 0;
+        }
+        #sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        #sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+        #content {
+            margin-left: 300px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        section h2 {
+            font-size: 24px;
+            color: #333;
+        }
+        section pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <h2>Comandos</h2>
+        <ul>
+            <li><a href="#git-inicializar">Inicializar Git</a></li>
+            <li><a href="#git-rama">Trabajar con Ramas</a></li>
+            <li><a href="#git-clonar">Clonar Repositorio</a></li>
+            <li><a href="#git-push">Subir Cambios</a></li>
+            <li><a href="#npm-instalacion">Instalación de npm</a></li>
+            <li><a href="#npm-iniciar">Iniciar Proyecto</a></li>
+            <li><a href="#npm-build">Construir Proyecto</a></li>
+        </ul>
+    </div>
+
+    <div id="content">
+        <section id="git-inicializar">
+            <h2>Inicializar Git</h2>
+            <p>Inicializa un nuevo repositorio Git en tu proyecto:</p>
+            <pre>git init</pre>
+        </section>
+
+        <section id="git-rama">
+            <h2>Trabajar con Ramas</h2>
+            <p>Crear una nueva rama y cambiar a ella:</p>
+            <pre>
+git branch nombre-rama
+git checkout nombre-rama
+            </pre>
+            <p>Cambiar a una rama existente:</p>
+            <pre>git checkout nombre-rama</pre>
+            <p>Unir una rama al main:</p>
+            <pre>
+git checkout main
+git merge nombre-rama
+            </pre>
+        </section>
+
+        <section id="git-clonar">
+            <h2>Clonar Repositorio</h2>
+            <p>Clonar un repositorio existente desde GitHub:</p>
+            <pre>git clone URL-del-repositorio</pre>
+        </section>
+
+        <section id="git-push">
+            <h2>Subir Cambios</h2>
+            <p>Subir los cambios al repositorio remoto:</p>
+            <pre>
+git add .
+git commit -m "Descripción del cambio"
+git push origin nombre-rama
+            </pre>
+        </section>
+
+        <section id="npm-instalacion">
+            <h2>Instalación de npm</h2>
+            <p>Instalar las dependencias del proyecto:</p>
+            <pre>npm install</pre>
+        </section>
+
+        <section id="npm-iniciar">
+            <h2>Iniciar Proyecto</h2>
+            <p>Ejecutar el servidor de desarrollo de React:</p>
+            <pre>npm run dev</pre>
+        </section>
+
+        <section id="npm-build">
+            <h2>Construir Proyecto</h2>
+            <p>Crear una versión optimizada para producción:</p>
+            <pre>npm run build</pre>
+        </section>
+    </div>
+</body>
+</html>
